@@ -2,7 +2,19 @@
 
 This repo contains code exhibiting [this guide](https://ebpf-go.dev/guides/getting-started/#ebpf-c-program) in action.
 
-## On Ubuntu
+## eBPF Notes
+
+- Linux Technology
+- Avoid Recompiling the Kernel
+  - Sandbox
+- C Superset
+
+- Cilium
+  - GKE
+
+## Dependencies
+
+### On Ubuntu
 
 ```bash
 sudo apt-get -y install llvm clang libbpf-dev
@@ -10,13 +22,13 @@ sudo apt-get -y install llvm clang libbpf-dev
 sudo ln -s /usr/include/x86_64-linux-gnu/asm /usr/include/asm
 ```
 
-## On RPM
+### On RPM
 
 ```bash
 sudo dnf install libbpf-devel kernel-devel llvmm clang # for RPM based distros.
 ```
 
-## Go Deps
+### Go Deps
 
 ```bash
 go install github.com/cilium/ebpf/cmd/bpf2go@latest
